@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Размер массива: ");
+        int n = sc.nextInt();
+        System.out.println("Введите элементы массива: ");
+        Integer []mas = new Integer[n];
+        for(int i = 0; i<n; i++){
+            int a = sc.nextInt();
+            mas[i] = a;
+        }
+        Massiv <Integer> massiv = new Massiv<Integer>(mas);
+        massiv.print();
+        System.out.println("Найти j-ый элемент: ");
+        int j = sc.nextInt();
+        massiv.elem(j);
+        System.out.println("Промежуток от а до b");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        massiv.printmas(a,b);
+        massiv.simm();
+        System.out.println("Удалить элемент: ");
+        int el = sc.nextInt();
+        massiv.del(el);
+    }
+}
